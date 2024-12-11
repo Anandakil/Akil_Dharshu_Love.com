@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akil_dharshu@love.com</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .love-theme {
+            background: repeating-linear-gradient(45deg, red, pink 20px, orange 40px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .hidden {
+            display: none;
+        }
+        #password-section {
+            margin-top: 20%;
+        }
+        #result-section {
+            margin-top: 10%;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        img {
+            width: 300px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-theme"></div>
+
+    <!-- Password Section -->
+    <div id="password-section">
+        <h1>Akil_dharshu@love.com</h1>
+        <p>Please enter the password to continue:</p>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-section" class="hidden">
+        <h1>Just a prank!</h1>
+        <img src="joker.jpg" alt="Joker image">
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            const passwordSection = document.getElementById("password-section");
+            const resultSection = document.getElementById("result-section");
+
+            if (password === "Bhao#meow") {
+                passwordSection.classList.add("hidden");
+                resultSection.classList.remove("hidden");
+            } else {
+                alert("Incorrect Password!");
+            }
+        }
+    </script>
+</body>
+</html>
